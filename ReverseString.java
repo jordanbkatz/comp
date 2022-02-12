@@ -16,6 +16,9 @@ public class ReverseString {
                 System.out.println(out[j]);
             }
         }
+        catch (Exception e) {
+            System.out.println("Uncaught Exception: " + e);
+        }
         finally {
             s.close();
         }
