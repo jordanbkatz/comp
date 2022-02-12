@@ -27,7 +27,6 @@ public class PrimeGenerator {
             for (int i = 0; i < primes.size(); i++) {
                 System.out.println(primes.get(i));
             }
-
         }
         catch (Exception e) {
             System.out.println("Uncaught Exception: " + e);
