@@ -1,16 +1,15 @@
 package algorithms;
 import java.util.*;
 //import java.io.*;
-public class Sum {
+public class ToggleStringCases {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         try {
             int ntc = 1;
             ntc = getNumTestCases(sc);
             while (sc.hasNext() && ntc != 0) {
-                int a = sc.nextInt();
-                int b = sc.nextInt();
-                System.out.println(sum(a, b));
+                String str = sc.nextLine();
+                System.out.println(toggleStringCases(str));
                 ntc--;
             }
         }
@@ -21,8 +20,19 @@ public class Sum {
             sc.close();
         }
     }
-    private static int sum(int a, int b) {
-        return a + b;
+    private static String toggleStringCases(String str) {
+        char[] toggled = new char[str.length()];
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (Character.isUpperCase(c)) {
+                c = Character.toLowerCase(c);
+            }
+            else {
+                c = Character.toUpperCase(c);
+            }
+            toggled[i] = c;
+        }
+        return new String(toggled);
     }
     private static int getNumTestCases(Scanner sc) {
         int ntc = sc.nextInt();

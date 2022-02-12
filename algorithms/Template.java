@@ -5,17 +5,12 @@ public class Template {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         try {
-            int tc = 1;
-            boolean getTestCases = true;
-            if (getTestCases) {
-                tc = sc.nextInt();
-                sc.nextLine();
-            }
-            while (sc.hasNext() && tc != 0) {
+            int ntc = 1;
+            ntc = getNumTestCases(sc);
+            while (sc.hasNext() && ntc != 0) {
                 int in = sc.nextInt();
-                int out = in;
-                System.out.println(out);
-                tc--;
+                System.out.println(algorithm(in));
+                ntc--;
             }
         }
         catch (Exception e) {
@@ -24,5 +19,14 @@ public class Template {
         finally {
             sc.close();
         }
+    }
+    private static int algorithm(int in) {
+        int out = in;
+        return out;
+    }
+    private static int getNumTestCases(Scanner sc) {
+        int ntc = sc.nextInt();
+        sc.nextLine();
+        return ntc;
     }
 }
