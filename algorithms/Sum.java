@@ -1,32 +1,28 @@
 package algorithms;
 import java.util.*;
-//import java.io.*;
 public class Sum {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         try {
-            int ntc = 1;
-            ntc = getNumTestCases(sc);
-            while (sc.hasNext() && ntc != 0) {
-                int a = sc.nextInt();
-                int b = sc.nextInt();
-                System.out.println(sum(a, b));
-                ntc--;
+            int tcn = getNumTestCases(sc, true);
+            while (sc.hasNext() && tcn != 0) {
+                solve(sc, tcn);
+                tcn--;
             }
         }
         catch (Exception e) {
-            System.out.println("Exception: " + e);
+            System.out.println("Something went wrong: " + e);
         }
         finally {
             sc.close();
         }
     }
-    private static int sum(int a, int b) {
-        return a + b;
+    private static void solve(Scanner sc, int tcn) {
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        System.out.println(a + b);
     }
-    private static int getNumTestCases(Scanner sc) {
-        int ntc = sc.nextInt();
-        sc.nextLine();
-        return ntc;
+    private static int getNumTestCases(Scanner sc, boolean ask) {
+        return (ask) ? Integer.parseInt(sc.nextLine()) : 1;
     }
 }

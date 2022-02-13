@@ -1,6 +1,5 @@
-package algorithms;
 import java.util.*;
-public class ToggleStringCases {
+public class Template {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         try {
@@ -18,19 +17,8 @@ public class ToggleStringCases {
         }
     }
     private static void solve(Scanner sc, int tcn) {
-        String str = sc.nextLine();
-        char[] toggled = new char[str.length()];
-        for (int i = 0; i < str.length(); i++) {
-            char c = str.charAt(i);
-            if (Character.isUpperCase(c)) {
-                c = Character.toLowerCase(c);
-            }
-            else {
-                c = Character.toUpperCase(c);
-            }
-            toggled[i] = c;
-        }
-        System.out.println(new String(toggled));
+        int in = sc.nextInt();
+        System.out.println(in);
     }
     private static int getNumTestCases(Scanner sc, boolean ask) {
         return (ask) ? Integer.parseInt(sc.nextLine()) : 1;
