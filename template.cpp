@@ -1,16 +1,14 @@
-#include<iostream>
-#include<cmath>
-#include<vector>
-#include<string>
+#include<bits/stdc++.h>
 #define ll long long
+using namespace std;
 void solve(int tc) {
-    std::cout << tc << std::endl;
+    cout << tc << endl;
 }
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(NULL);
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
     int tc = 1;
-    std::cin >> tc;
+    cin >> tc;
     for (int i = 1; i <= tc; i++) {
         solve(i);
     }

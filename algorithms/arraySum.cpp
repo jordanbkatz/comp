@@ -2,15 +2,14 @@
 #define ll long long
 using namespace std;
 void solve(int tc) {
-    string str, toggled;
-    cin >> str;
-    toggled = str;
-    for (int i = 0; i < toggled.length(); i++) {
-        char c = str.at(i);
-        c = isupper(c) ? tolower(c) : toupper(c);
-        toggled[i] = c;
+    int length, sum = 0;
+    cin >> length;
+    int arr[length];
+    for (int i = 0; i < length; i++) {
+        cin >> arr[i];
+        sum += arr[i];
     }
-    cout << toggled << endl;
+    cout << sum << endl;
 }
 int main() {
     ios::sync_with_stdio(false);

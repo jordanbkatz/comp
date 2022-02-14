@@ -1,22 +1,20 @@
-#include<iostream>
-#include<cmath>
-#include<vector>
-#include<string>
+#include<bits/stdc++.h>
 #define ll long long
+using namespace std;
 void solve(int tc) {
-    std::string str, reversed;
-    std::cin >> str;
+    string str, reversed;
+    cin >> str;
     reversed = str;
     for (int i = 0; i < reversed.length(); i++) {
         reversed[reversed.length() - i - 1] = str.at(i);
     }
-    std::cout << reversed << std::endl;
+    cout << reversed << endl;
 }
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(NULL);
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
     int tc = 1;
-    std::cin >> tc;
+    cin >> tc;
     for (int i = 1; i <= tc; i++) {
         solve(i);
     }
