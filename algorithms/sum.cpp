@@ -2,17 +2,16 @@
 #include<vector>
 #include<string>
 #define ll long long
-using namespace std;
 void solve(int tc) {
     int a, b;
-    cin >> a >> b;
-    cout << a + b << endl;
+    std::cin >> a >> b;
+    std::cout << a + b << std::endl;
 }
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(NULL);
     int tc = 1;
-    cin >> tc;
+    std::cin >> tc;
     for (int i = 1; i <= tc; i++) {
         solve(i);
     }

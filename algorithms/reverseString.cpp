@@ -2,21 +2,20 @@
 #include<vector>
 #include<string>
 #define ll long long
-using namespace std;
 void solve(int tc) {
-    string str, reversed;
-    cin >> str;
+    std::string str, reversed;
+    std::cin >> str;
     reversed = str;
     for (int i = 0; i < reversed.length(); i++) {
         reversed[reversed.length() - i - 1] = str.at(i);
     }
-    cout << reversed << endl;
+    std::cout << reversed << std::endl;
 }
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(NULL);
     int tc = 1;
-    cin >> tc;
+    std::cin >> tc;
     for (int i = 1; i <= tc; i++) {
         solve(i);
     }
