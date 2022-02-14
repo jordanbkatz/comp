@@ -1,6 +1,7 @@
 #include<iostream>
 #include<vector>
 #include<string>
+#define ll long long
 using namespace std;
 void solve(int tc) {
     string str, reversed;
@@ -12,11 +13,12 @@ void solve(int tc) {
     cout << reversed << endl;
 }
 int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
     int tc = 1;
     cin >> tc;
-    while (tc > 0) {
-        solve(tc);
-        tc--;
+    for (int i = 1; i <= tc; i++) {
+        solve(i);
     }
     return 0;
 }
