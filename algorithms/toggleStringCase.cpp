@@ -14,7 +14,7 @@ void solve() {
     cout << toggled << endl;
 }
 int main() {
-    ios::sync_with_stdio(false);
+    ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     int tc = 1;
     cin >> tc;
