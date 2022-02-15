@@ -3,14 +3,16 @@
 #define pb push_back
 #define ll long long
 using namespace std;
-string str, reversed;
+int length;
+ll n, sum;
 void solve(int &tc) {
-    cin >> str;
-    reversed = str;
-    for (int i = 0; i < reversed.length(); i++) {
-        reversed[reversed.length() - i - 1] = str[i];
+    cin >> length;
+    sum = 0;
+    for (int i = 0; i < length; i++) {
+        cin >> n;
+        sum += n;
     }
-    cout << reversed << endl;
+    cout << sum << endl;
 }
 int main() {
     ios_base::sync_with_stdio(false);

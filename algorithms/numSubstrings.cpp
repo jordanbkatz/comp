@@ -1,8 +1,11 @@
 #include<bits/stdc++.h>
+#define pf push_front
+#define pb push_back
+#define ll long long
 using namespace std;
 string str;
 int l, n;
-void solve() {
+void solve(int &tc) {
     cin >> str;
     l = str.length();
     n = (l * (l + 1)) / 2;
@@ -10,11 +13,11 @@ void solve() {
 }
 int main() {
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(0);
     int tc = 1;
     cin >> tc;
     for (int i = 1; i <= tc; i++) {
-        solve();
+        solve(i);
     }
     return 0;
 }

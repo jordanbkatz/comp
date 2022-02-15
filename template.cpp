@@ -1,15 +1,18 @@
 #include<bits/stdc++.h>
+#define pf push_front
+#define pb push_back
 using namespace std;
-void solve() {
-    
+typedef long long ll;
+void solve(int &tc) {
+
 }
 int main() {
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(0);
     int tc = 1;
-    cin >> tc;
+    //cin >> tc;
     for (int i = 1; i <= tc; i++) {
-        solve();
+        solve(i);
     }
     return 0;
 }

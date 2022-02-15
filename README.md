@@ -6,58 +6,66 @@ A repository for my competitive programming.
 This can also be found in the template.cpp file in the root directory.
 ```cpp
 #include<bits/stdc++.h>
+#define pf push_front
+#define pb push_back
 #define ll long long
 using namespace std;
-void solve() {
+void solve(int &tc) {
+
 }
 int main() {
     ios::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(0);
     int tc = 1;
-    cin >> tc;
+    //cin >> tc;
     for (int i = 1; i <= tc; i++) {
-        solve();
+        solve(i);
     }
     return 0;
 }
 ```
 ### Explanation
+Include header files.
 ```cpp
 #include<bits/stdc++.h>
 ```
-Includes header files.
+Define macros for adding elements to front and back of vectors.
+```cpp
+#define pf push_front
+#define pb push_back
+```
+Define macro for long long type
 ```cpp
 #define ll long long
 ```
-Defines ll macro for long long.
+Uses std namespace.
 ```cpp
 using namespace std;
 ```
-Uses std namespace; gets rid of need for writing std:: everytime.
+Function that will run for each test case to solve the problem. Passes current test case # by reference.
 ```cpp
-void solve() {
+void solve(int &tc) {
 
 }
 ```
-Function that will run for each test case to solve the problem.
+Disables the synchronizations of I/O streams.
 ```cpp
 ios::sync_with_stdio(false);
-cin.tie(NULL);
-```
-Disables the synchronizations of C and C++ I/O streams.
-```cpp
-int tc = 1;
+cin.tie(0);
 ```
 Default number of test cases is set 1.
 ```cpp
-cin >> tc;
+int tc = 1;
 ```
-First line of input will set the number of test cases. Comment this line out if their is only one test case or the number is predefined and you can edit the value in the line above.
+Uncommenting this line sets the number of test cases to the first line of input.
+```cpp
+//cin >> tc;
+```
+Runs solve function for each test case, passing the test case # in as the argument.
 ```cpp
 for (int i = 1; i <= tc; i++) {
-    solve();
+    solve(i);
 }
 ```
-Runs solve function for each test case, passing the test number in as the argument.
 ### License
 MIT
