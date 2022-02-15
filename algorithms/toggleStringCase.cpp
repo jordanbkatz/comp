@@ -1,12 +1,13 @@
 #include<bits/stdc++.h>
 #define ll long long
 using namespace std;
-void solve(int tc) {
-    string str, toggled;
+string str, toggled;
+char c;
+void solve() {
     cin >> str;
     toggled = str;
     for (int i = 0; i < toggled.length(); i++) {
-        char c = str.at(i);
+        c = str[i];
         c = isupper(c) ? tolower(c) : toupper(c);
         toggled[i] = c;
     }
@@ -18,7 +19,7 @@ int main() {
     int tc = 1;
     cin >> tc;
     for (int i = 1; i <= tc; i++) {
-        solve(i);
+        solve();
     }
     return 0;
 }

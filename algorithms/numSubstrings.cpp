@@ -1,11 +1,12 @@
 #include<bits/stdc++.h>
 #define ll long long
 using namespace std;
-void solve(int tc) {
-    string str;
+string str;
+int l, n;
+void solve() {
     cin >> str;
-    int l = str.length();
-    int n = (l * (l + 1)) / 2;
+    l = str.length();
+    n = (l * (l + 1)) / 2;
     cout << n << endl;
 }
 int main() {
@@ -14,7 +15,7 @@ int main() {
     int tc = 1;
     cin >> tc;
     for (int i = 1; i <= tc; i++) {
-        solve(i);
+        solve();
     }
     return 0;
 }

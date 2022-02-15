@@ -1,12 +1,14 @@
 #include<bits/stdc++.h>
 #define ll long long
 using namespace std;
-void solve(int tc) {
-    int minimum, maximum;
+int minimum, maximum; 
+vector<int> primes;
+bool isPrime;
+void solve() {
     cin >> minimum >> maximum;
-    vector<int> primes;
+    primes.clear();
     for (int i = max(2, minimum); i < maximum; i++) {
-        bool isPrime = true;
+        isPrime = true;
         for (int j = 2; j < i - 1; j++) {
             if (i % j == 0) {
                 isPrime = false;
@@ -26,7 +28,7 @@ int main() {
     int tc = 1;
     cin >> tc;
     for (int i = 1; i <= tc; i++) {
-        solve(i);
+        solve();
     }
     return 0;
 }

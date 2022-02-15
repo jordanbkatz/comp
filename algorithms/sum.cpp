@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 #define ll long long
 using namespace std;
-void solve(int tc) {
-    int a, b;
+int a, b;
+void solve() {
     cin >> a >> b;
     cout << a + b << endl;
 }
@@ -12,7 +12,7 @@ int main() {
     int tc = 1;
     cin >> tc;
     for (int i = 1; i <= tc; i++) {
-        solve(i);
+        solve();
     }
     return 0;
 }

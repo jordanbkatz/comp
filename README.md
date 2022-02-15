@@ -8,8 +8,7 @@ This can also be found in the template.cpp file in the root directory.
 #include<bits/stdc++.h>
 #define ll long long
 using namespace std;
-void solve(int tc) {
-    cout << tc << endl;
+void solve() {
 }
 int main() {
     ios::sync_with_stdio(false);
@@ -17,7 +16,7 @@ int main() {
     int tc = 1;
     cin >> tc;
     for (int i = 1; i <= tc; i++) {
-        solve(i);
+        solve();
     }
     return 0;
 }
@@ -36,8 +35,8 @@ using namespace std;
 ```
 Uses std namespace; gets rid of need for writing std:: everytime.
 ```cpp
-void solve(int tc) {
-    cout << tc << endl;
+void solve() {
+
 }
 ```
 Function that will run for each test case to solve the problem.
@@ -56,7 +55,7 @@ cin >> tc;
 First line of input will set the number of test cases. Comment this line out if their is only one test case or the number is predefined and you can edit the value in the line above.
 ```cpp
 for (int i = 1; i <= tc; i++) {
-    solve(i);
+    solve();
 }
 ```
 Runs solve function for each test case, passing the test number in as the argument.

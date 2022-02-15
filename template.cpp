@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 #define ll long long
 using namespace std;
-void solve(int tc) {
-    cout << tc << endl;
+void solve() {
+    
 }
 int main() {
     ios::sync_with_stdio(false);
@@ -10,7 +10,7 @@ int main() {
     int tc = 1;
     cin >> tc;
     for (int i = 1; i <= tc; i++) {
-        solve(i);
+        solve();
     }
     return 0;
 }
