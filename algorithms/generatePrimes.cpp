@@ -1,7 +1,6 @@
 #include<bits/stdc++.h>
-#define ll long long
 using namespace std;
-int minimum, maximum; 
+int minimum, maximum;
 vector<int> primes;
 bool isPrime;
 void solve() {

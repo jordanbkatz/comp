@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-#define ll long long
 using namespace std;
 string str, toggled;
 char c;
