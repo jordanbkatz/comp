@@ -20,8 +20,8 @@ void solve(int &tc) {
             primes.pb(i);
         }
     }
-    for (int i = 0; i < primes.size(); i++) {
-        cout << primes[i] << endl;
+    for (const int prime : primes) {
+        cout << prime << endl;
     }
 }
 int main() {
