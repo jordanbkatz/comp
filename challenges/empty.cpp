@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 #define pf push_front
 #define pb push_back
+#define ll long long
 using namespace std;
-typedef long long ll;
 void solve(int &tc) {
     
 }

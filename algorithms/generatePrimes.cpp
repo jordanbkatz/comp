@@ -20,7 +20,7 @@ void solve(int &tc) {
             primes.pb(i);
         }
     }
-    for (const int prime : primes) {
+    for (const int &prime : primes) {
         cout << prime << endl;
     }
 }
