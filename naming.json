@@ -1,9 +1,0 @@
-{
-    "variable": ["x", "y", "z"],
-    "index": ["i", "j", "k"],
-    "array": "a",
-    "vector": "v",
-    "length": "l",
-    "count": "c",
-    "test cases": "tc"
-}

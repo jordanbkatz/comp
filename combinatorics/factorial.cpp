@@ -5,34 +5,19 @@
 using namespace std;
 template <typename T> void logVal(const string, const T &);
 template <typename T> void logIter(const string, const T &);
-int s, n, primary, secondary, diff;
-vector<vector<int>> v;
-vector<int> row;
+ll factorial(const int);
 void solve(const int &tc) {
-    cin >> s;
-    v.clear();
-    for (int i = 0; i < s; i++) {
-        row.clear();
-        for (int j = 0; j < s; j++) {
-            cin >> n;
-            row.pb(n);
-        }
-        v.pb(row);
+    vector<int> vec;
+    for (int i = 0; i <= 10; i++) {
+        vec.pb(factorial(i));
     }
-    primary = 0;
-    secondary = 0;
-    for (int i = 0; i < v.size(); i++) {
-        primary += v[i][i];
-        secondary += v[v.size() - i - 1][i];
-    }
-    diff = abs(primary - secondary);
-    cout << "Case #" << tc << ": " << diff << endl;
+    logIter("factorials", vec);
 }
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
     int tc = 1;
-    cin >> tc;
+    //cin >> tc;
     for (int i = 1; i <= tc; i++) {
         solve(i);
     }
@@ -47,4 +32,11 @@ template <typename T> void logIter(const string name, const T &iter) {
         cout << ele << " ";
     }
     cout << "}" << endl;
+}
+ll factorial(const int n) {
+    ll f = 1;
+    for (int i = 1; i <= n; i++) {
+        f *= i;
+    }
+    return f;
 }

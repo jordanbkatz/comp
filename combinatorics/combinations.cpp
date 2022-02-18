@@ -5,20 +5,20 @@
 using namespace std;
 template <typename T> void logVal(const string, const T &);
 template <typename T> void logIter(const string, const T &);
-int n, factorial;
+ll factorial(const int);
+ll combinations(const int, const int);
 void solve(const int &tc) {
-    cin >> n;
-    factorial = n;
-    for (int i = --n; i > 0; i--) {
-        factorial *= i;
+    vector<int> vec;
+    for (int i = 0; i <= 10; i++) {
+        vec.pb(combinations(i, 2));
     }
-    cout << "Case #" << tc << ": " << factorial << endl;
+    logIter("permutations", vec);
 }
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
     int tc = 1;
-    cin >> tc;
+    //cin >> tc;
     for (int i = 1; i <= tc; i++) {
         solve(i);
     }
@@ -33,4 +33,14 @@ template <typename T> void logIter(const string name, const T &iter) {
         cout << ele << " ";
     }
     cout << "}" << endl;
+}
+ll factorial(const int n) {
+    ll f = 1;
+    for (int i = 1; i <= n; i++) {
+        f *= i;
+    }
+    return f;
+}
+ll combinations(const int n, const int r) {
+    return factorial(n) / (factorial(n - r) * factorial(r));
 }

@@ -5,29 +5,29 @@
 using namespace std;
 template <typename T> void logVal(const string, const T &);
 template <typename T> void logIter(const string, const T &);
-int l, tmp, c;
-bool shares;
-vector<int> v;
+int n, x, cnt;
+bool boo;
+vector<int> vec;
 void solve(const int &tc) {
-    cin >> l;
-    v.clear();
-    for (int i = 0; i < l; i++) {
-        cin >> tmp;
-        v.pb(tmp);
+    cin >> n;
+    vec.clear();
+    for (int i = 0; i < n; i++) {
+        cin >> x;
+        vec.pb(x);
     }
-    c = 1;
-    for (int i = *min_element(v.begin(), v.end()); i > 1; i--) {
-        shares = true;
-        for (const auto &val : v) {
-            if (val % i != 0) {
-                shares = false;
+    cnt = 1;
+    for (int i = *min_element(vec.begin(), vec.end()); i > 1; i--) {
+        boo = true;
+        for (const auto &ele : vec) {
+            if (ele % i != 0) {
+                boo = false;
             }
         }
-        if (shares) {
-            c++;
+        if (boo) {
+            cnt++;
         }
     }
-    cout << "Case #" << tc << ": " << c << endl;
+    cout << "Case #" << tc << ": " << cnt << endl;
 }
 int main() {
     ios_base::sync_with_stdio(false);

@@ -5,21 +5,17 @@
 using namespace std;
 template <typename T> void logVal(const string, const T &);
 template <typename T> void logIter(const string, const T &);
-int length, n, sum;
+int numSubStrs(const string);
 void solve(const int &tc) {
-    sum = 0;
-    cin >> length;
-    for (int i = 0; i < length; i++) {
-        cin >> n;
-        sum += n;
-    }
-    cout << "Case #" << tc << ": " << sum << endl;
+    string str = "Hello";
+    logVal("before", str);
+    logVal("after", numSubStrs(str));
 }
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
     int tc = 1;
-    cin >> tc;
+    //cin >> tc;
     for (int i = 1; i <= tc; i++) {
         solve(i);
     }
@@ -34,4 +30,8 @@ template <typename T> void logIter(const string name, const T &iter) {
         cout << ele << " ";
     }
     cout << "}" << endl;
+}
+int numSubStrs(const string str) {
+    int len = str.length();
+    return (len * (len + 1)) / 2;
 }

@@ -5,26 +5,17 @@
 using namespace std;
 template <typename T> void logVal(const string, const T &);
 template <typename T> void logIter(const string, const T &);
-int n, start, last, fib;
+vector<int> primes(int, int);
 void solve(const int &tc) {
-    cin >> n;
-    start = 1;
-    last = 0;
-    fib = 1;
-    for (int i = 0; i < n; i++) {
-        if (i == 0 && start == 0) {
-            continue;
-        }
-        fib += last;
-        last = fib - last;
-    }
-    cout << "Case #" << tc << ": " << fib << endl;
+    vector<int> vec;
+    vec = primes(0, 10);
+    logIter("primes", vec);
 }
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
     int tc = 1;
-    cin >> tc;
+    //cin >> tc;
     for (int i = 1; i <= tc; i++) {
         solve(i);
     }
@@ -39,4 +30,20 @@ template <typename T> void logIter(const string name, const T &iter) {
         cout << ele << " ";
     }
     cout << "}" << endl;
+}
+vector<int> primes(const int minimum, const int maximum) {
+    vector<int> primes;
+    bool isPrime;
+    for (int i = max(2, minimum); i < maximum; i++) {
+        isPrime = true;
+        for (int j = 2; j < i - 1; j++) {
+            if (i % j == 0) {
+                isPrime = false;
+            }
+        }
+        if (isPrime) {
+            primes.pb(i);
+        }
+    }
+    return primes;
 }
