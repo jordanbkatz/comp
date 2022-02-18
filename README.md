@@ -10,11 +10,13 @@ This can also be found in the template.cpp file in the root directory.
 #define pb push_back
 #define ll long long
 using namespace std;
-void solve(int &tc) {
+template <typename T> void logVal(const string, const T &);
+template <typename T> void logIter(const string name, const T &);
+void solve(const int &tc) {
 
 }
 int main() {
-    ios::sync_with_stdio(false);
+    ios_base::sync_with_stdio(false);
     cin.tie(0);
     int tc = 1;
     //cin >> tc;
@@ -22,6 +24,16 @@ int main() {
         solve(i);
     }
     return 0;
+}
+template <typename T> void logVal(const string name, const T &val) {
+    cout << name << " => " << val << endl;
+}
+template <typename T> void logIter(const string name, const T &iter) {
+    cout << name << " => { ";
+    for (const auto &ele : iter) {
+        cout << ele << " ";
+    }
+    cout << "}" << endl;
 }
 ```
 ### Explanation
@@ -42,15 +54,20 @@ Uses std namespace.
 ```cpp
 using namespace std;
 ```
+Logging function prototypes.
+```cpp
+template <typename T> void logVal(const string, const T &);
+template <typename T> void logIter(const string name, const T &);
+```
 Function that will run for each test case to solve the problem. Passes current test case # by reference.
 ```cpp
-void solve(int &tc) {
+void solve(const int &tc) {
 
 }
 ```
-Disables the synchronizations of I/O streams.
+Disables the synchronization between I/O streams.
 ```cpp
-ios::sync_with_stdio(false);
+ios_base::sync_with_stdio(false);
 cin.tie(0);
 ```
 Default number of test cases is set 1.
@@ -65,6 +82,19 @@ Runs solve function for each test case, passing the test case # in as the argume
 ```cpp
 for (int i = 1; i <= tc; i++) {
     solve(i);
+}
+```
+Logging template functions.
+```cpp
+template <typename T> void logVal(const string name, const T &val) {
+    cout << name << " => " << val << endl;
+}
+template <typename T> void logIter(const string name, const T &iter) {
+    cout << name << " => { ";
+    for (const auto &ele : iter) {
+        cout << ele << " ";
+    }
+    cout << "}" << endl;
 }
 ```
 ### License

@@ -3,10 +3,13 @@
 #define pb push_back
 #define ll long long
 using namespace std;
-int a, b;
-void solve(int &tc) {
+template <typename T> void logVal(const string, const T &);
+template <typename T> void logIter(const string, const T &);
+int a, b, sum;
+void solve(const int &tc) {
     cin >> a >> b;
-    cout << a + b << endl;
+    sum = a + b;
+    cout << "Case #" << tc << ": " << sum << endl;
 }
 int main() {
     ios_base::sync_with_stdio(false);
@@ -17,4 +20,14 @@ int main() {
         solve(i);
     }
     return 0;
+}
+template <typename T> void logVal(const string name, const T &val) {
+    cout << name << " => " << val << endl;
+}
+template <typename T> void logIter(const string name, const T &iter) {
+    cout << name << " => { ";
+    for (const auto &ele : iter) {
+        cout << ele << " ";
+    }
+    cout << "}" << endl;
 }
