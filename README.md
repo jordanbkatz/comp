@@ -11,7 +11,7 @@ This can also be found in the template.cpp file in the root directory.
 #define ll long long
 using namespace std;
 template <typename T> void logVal(const string, const T &);
-template <typename T> void logIter(const string name, const T &);
+template <typename T> void logVec(const string name, const T &);
 void solve(const int &tc) {
 
 }
@@ -28,9 +28,9 @@ int main() {
 template <typename T> void logVal(const string name, const T &val) {
     cout << name << " => " << val << endl;
 }
-template <typename T> void logIter(const string name, const T &iter) {
+template <typename T> void logVec(const string name, const vector<T> &vec) {
     cout << name << " => { ";
-    for (const auto &ele : iter) {
+    for (const auto &ele : vec) {
         cout << ele << " ";
     }
     cout << "}" << endl;
@@ -57,7 +57,7 @@ using namespace std;
 Logging function prototypes.
 ```cpp
 template <typename T> void logVal(const string, const T &);
-template <typename T> void logIter(const string name, const T &);
+template <typename T> void logVec(const string name, const vector<T> &);
 ```
 Function that will run for each test case to solve the problem. Passes current test case # by reference.
 ```cpp
@@ -89,9 +89,9 @@ Logging template functions.
 template <typename T> void logVal(const string name, const T &val) {
     cout << name << " => " << val << endl;
 }
-template <typename T> void logIter(const string name, const T &iter) {
+template <typename T> void logVec(const string name, const vector<T> &vec) {
     cout << name << " => { ";
-    for (const auto &ele : iter) {
+    for (const auto &ele : vec) {
         cout << ele << " ";
     }
     cout << "}" << endl;
