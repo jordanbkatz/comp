@@ -4,11 +4,12 @@
 #define ll long long
 using namespace std;
 template <typename T> void logVal(const string, const T &);
-template <typename T> void logVec(const string, const T &);
+template <typename T> void logVec(const string, const vector<T> &);
 template <typename T> pair<int, T> minEle(const vector<T>);
 void solve(const int &tc) {
     vector<int> vec = {3, 5, 9, 1, 3};
     pair<int, int> mini = minEle(vec);
+    logVec("vector", vec);
     logVal("index", mini.first);
     logVal("minimum", mini.second);
 }

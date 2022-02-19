@@ -5,10 +5,14 @@
 using namespace std;
 template <typename T> void logVal(const string, const T &);
 template <typename T> void logVec(const string, const vector<T> &);
-vector<int> commonFactors(const vector<int>);
+vector<int> primes(int, int);
 void solve(const int &tc) {
-    vector<int> vec = {16, 32, 64};
-    logVec("common factors", commonFactors(vec));
+    int mini = 0;
+    int maxi = 10;
+    vector<int> vec = primes(mini, maxi);
+    logVal("minimum", mini);
+    logVal("maximum", maxi);
+    logVec("primes", vec);
 }
 int main() {
     ios_base::sync_with_stdio(false);
@@ -30,19 +34,19 @@ template <typename T> void logVec(const string name, const vector<T> &vec) {
     }
     cout << "}" << endl;
 }
-vector<int> commonFactors(const vector<int> vec) {
-    vector<int> factors;
-    bool isFactor;
-    for (int i = 1; i <= *min_element(vec.begin(), vec.end()); i++) {
-        isFactor = true;
-        for (const auto &ele : vec) {
-            if (ele % i != 0) {
-                isFactor = false;
+vector<int> primes(const int minimum, const int maximum) {
+    vector<int> primes;
+    bool isPrime;
+    for (int i = max(2, minimum); i < maximum; i++) {
+        isPrime = true;
+        for (int j = 2; j < i - 1; j++) {
+            if (i % j == 0) {
+                isPrime = false;
             }
         }
-        if (isFactor) {
-            factors.pb(i);
+        if (isPrime) {
+            primes.pb(i);
         }
     }
-    return factors;
+    return primes;
 }

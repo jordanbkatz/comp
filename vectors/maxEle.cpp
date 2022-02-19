@@ -9,6 +9,7 @@ template <typename T> pair<int, T> maxEle(const vector<T>);
 void solve(const int &tc) {
     vector<int> vec = {3, 5, 9, 1, 3};
     pair<int, int> maxi = maxEle(vec);
+    logVec("vector", vec);
     logVal("index", maxi.first);
     logVal("maximum", maxi.second);
 }

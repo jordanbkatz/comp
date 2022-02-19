@@ -11,7 +11,7 @@ This can also be found in the template.cpp file in the root directory.
 #define ll long long
 using namespace std;
 template <typename T> void logVal(const string, const T &);
-template <typename T> void logVec(const string name, const T &);
+template <typename T> void logVec(const string, const vector<T> &);
 void solve(const int &tc) {
 
 }
@@ -57,7 +57,7 @@ using namespace std;
 Logging function prototypes.
 ```cpp
 template <typename T> void logVal(const string, const T &);
-template <typename T> void logVec(const string name, const vector<T> &);
+template <typename T> void logVec(const string, const vector<T> &);
 ```
 Function that will run for each test case to solve the problem. Passes current test case # by reference.
 ```cpp
