@@ -1,17 +1,14 @@
 #include<bits/stdc++.h>
-#define pf push_front
-#define pb push_back
-#define ll long long
 using namespace std;
-template <typename T> void logVal(const string, const T &);
-template <typename T> void logVec(const string, const vector<T> &);
+template <typename T> void logVal(const T *);
+template <typename T> void logVec(const vector<T> *);
 template <typename T> pair<int, T> minEle(const vector<T>);
 void solve(const int &tc) {
     vector<int> vec = {3, 5, 9, 1, 3};
     pair<int, int> mini = minEle(vec);
-    logVec("vector", vec);
-    logVal("index", mini.first);
-    logVal("minimum", mini.second);
+    logVec(&vec);
+    logVal(&mini.first);
+    logVal(&mini.second);
 }
 int main() {
     ios_base::sync_with_stdio(false);
@@ -23,12 +20,12 @@ int main() {
     }
     return 0;
 }
-template <typename T> void logVal(const string name, const T &val) {
-    cout << name << " => " << val << endl;
+template <typename T> void logVal(const T *val) {
+    cout << val << " => " << *val << endl;
 }
-template <typename T> void logVec(const string name, const vector<T> &vec) {
-    cout << name << " => { ";
-    for (const auto &ele : vec) {
+template <typename T> void logVec(const vector<T> *vec) {
+    cout << vec << " => { ";
+    for (const auto &ele : *vec) {
         cout << ele << " ";
     }
     cout << "}" << endl;

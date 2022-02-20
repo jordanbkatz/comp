@@ -1,18 +1,15 @@
 #include<bits/stdc++.h>
-#define pf push_front
-#define pb push_back
-#define ll long long
 using namespace std;
-template <typename T> void logVal(const string, const T &);
-template <typename T> void logVec(const string, const vector<T> &);
+template <typename T> void logVal(const T *);
+template <typename T> void logVec(const vector<T> *);
 vector<int> primes(int, int);
 void solve(const int &tc) {
     int mini = 0;
     int maxi = 10;
     vector<int> vec = primes(mini, maxi);
-    logVal("minimum", mini);
-    logVal("maximum", maxi);
-    logVec("primes", vec);
+    logVal(&mini);
+    logVal(&maxi);
+    logVec(&vec);
 }
 int main() {
     ios_base::sync_with_stdio(false);
@@ -24,12 +21,12 @@ int main() {
     }
     return 0;
 }
-template <typename T> void logVal(const string name, const T &val) {
-    cout << name << " => " << val << endl;
+template <typename T> void logVal(const T *val) {
+    cout << val << " => " << *val << endl;
 }
-template <typename T> void logVec(const string name, const vector<T> &vec) {
-    cout << name << " => { ";
-    for (const auto &ele : vec) {
+template <typename T> void logVec(const vector<T> *vec) {
+    cout << vec << " => { ";
+    for (const auto &ele : *vec) {
         cout << ele << " ";
     }
     cout << "}" << endl;
@@ -45,7 +42,7 @@ vector<int> primes(const int minimum, const int maximum) {
             }
         }
         if (isPrime) {
-            primes.pb(i);
+            primes.push_back(i);
         }
     }
     return primes;
