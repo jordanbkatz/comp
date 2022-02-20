@@ -31,11 +31,16 @@ template <typename T> void logVec(const vector<T> *vec) {
     cout << "}" << endl;
 }
 long long fibonacci(const int n) {
-    long long last = 0;
-    long long fib = 1;
-    for (int i = 0; i < n; i++) {
-        fib += last;
-        last = fib - last;
+    if (n != 0) {
+        long long last = 0;
+        long long fib = 1;
+        for (int i = 0; i < n - 1; i++) {
+            fib += last;
+            last = fib - last;
+        }
+        return fib;
     }
-    return fib;
+    else {
+        return 0;
+    }
 }

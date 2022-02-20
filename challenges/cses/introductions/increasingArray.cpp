@@ -4,7 +4,23 @@ template <typename T> void logVal(const T *);
 template <typename T> void logVec(const vector<T> *);
 const unsigned int MOD = 1e9 + 7;
 void solve(const int &tc) {
-    
+    int n, x;
+    cin >> n;
+    vector<long long> vec;
+    for (int i = 0; i < n; i++) {
+        cin >> x;
+        vec.push_back(x);
+    }
+    long long last = vec[0], moves = 0;
+    for (int i = 1; i < vec.size(); i++) {
+        if (vec[i] < last) {
+            moves += last - vec[i];
+        }
+        else {
+            last = vec[i];
+        }
+    }
+    cout << moves << endl;
 }
 int main() {
     ios_base::sync_with_stdio(false);
