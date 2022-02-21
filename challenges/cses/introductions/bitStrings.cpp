@@ -5,7 +5,13 @@ template <typename T> void logVal(const T *);
 template <typename T> void logVec(const vector<T> *);
 const int MOD = 1e9 + 7;
 void solve(const int &tc) {
-    
+    int n;
+    cin >> n;
+    long bitStrs = 2;
+    for (int i = 1; i < n; i++) {
+        bitStrs = (bitStrs * 2) % MOD;
+    }
+    cout << bitStrs << endl;
 }
 int main() {
     ios_base::sync_with_stdio(false);

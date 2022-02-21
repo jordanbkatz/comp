@@ -2,6 +2,7 @@
 using namespace std;
 template <typename T> void logVal(const T *);
 template <typename T> void logVec(const vector<T> *);
+const int MOD = 1e9 + 7;
 void solve(const int &tc) {
     
 }

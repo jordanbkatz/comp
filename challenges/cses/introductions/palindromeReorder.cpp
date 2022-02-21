@@ -6,47 +6,50 @@ const unsigned int MOD = 1e9 + 7;
 void solve(const int &tc) {
     string str;
     cin >> str;
-    vector<int> chars(128, 0);
+    vector<int> chars(26);
+    int start = 65;
     for (const auto &c : str) {
-        chars[(int)c]++;
+        chars[((int) c) - start]++;
     }
     bool possible = true;
     int odds = 0;
     char odd;
-    for (int i = 65; i <= 90; i++) {
+    for (int i = 0; i < chars.size(); i++) {
         if (chars[i] % 2 == 1) {
             odds++;
-            odd = (char) i;
+            odd = (char) (i + start);
             if (odds > 1) {
                 possible = false;
                 break;
             }
         }
     }
-    if (!possible) {
-        cout << "NO SOLUTION" << endl;
+    string palindrome;
+    if (possible) {
+        for (int i = 0; i < chars.size(); i++) {
+            if ((char) (i + start) == odd) {
+                continue;
+            }
+            for (int j = 0; j < chars[i] / 2; j++) {
+                palindrome += (char) (i + start);
+            }
+        }
+        for (int i = 0; i < chars[((int) odd) - start]; i++) {
+            palindrome += odd;
+        }
+        for (int i = chars.size() - 1; i >= 0; i--) {
+            if ((char) (i + start) == odd) {
+                continue;
+            }
+            for (int j = 0; j < chars[i] / 2; j++) {
+                palindrome += (char) (i + start);
+            }
+        }
     }
     else {
-        for (int i = 65; i <= 90; i++) {
-            if ((char) i == odd) {
-                continue;
-            }
-            for (int j = 0; j < chars[i] / 2; j++) {
-                cout << (char) i;
-            }
-        }
-        for (int i = 0; i < chars[(int) odd]; i++) {
-            cout << odd;
-        }
-        for (int i = 90; i >= 65; i--) {
-            if ((char) i == odd) {
-                continue;
-            }
-            for (int j = 0; j < chars[i] / 2; j++) {
-                cout << (char) i;
-            }
-        }
+        palindrome = "NO SOLUTION";
     }
+    cout << palindrome << endl;
 }
 int main() {
     ios_base::sync_with_stdio(false);
