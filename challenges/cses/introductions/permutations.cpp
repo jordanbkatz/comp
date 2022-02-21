@@ -1,38 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
 template <typename T> void logVal(const T *);
-template <typename T> void logVec(const vector<T> *);
-const unsigned int MOD = 1e9 + 7;
+template <typename T> void logIter(const T *);
 void solve(const int &tc) {
     int n;
     cin >> n;
-    if (n == 1) {
-        cout << "1" << endl;
+    if (1 < n && n < 4) {
+        cout << "NO SOLUTION";
     }
     else {
-        vector<int> vec;
-        for (int i = 1; i <= n; i++) {
-            vec.push_back(i);
+        for (int i = 2; i <= n; i += 2) {
+            cout << i << " ";
         }
-        bool anyBeautiful = false, beautiful;
-        while (next_permutation(vec.begin(), vec.end())) {
-            beautiful = true;
-            for (int i = 0; i < vec.size(); i++) {
-                if (abs(vec[i] - vec[i - 1]) == 1) {
-                    beautiful = false;
-                }
-            }
-            if (beautiful) {
-                anyBeautiful = true;
-                for (const auto &val : vec) {
-                    cout << val << " ";
-                }
-                cout << endl;
-                break;
-            }
-        }
-        if (!anyBeautiful) {
-            cout << "NO SOLUTION" << endl;
+        for (int i = 1; i <= n; i += 2) {
+            cout << i << " ";
         }
     }
 }
@@ -49,9 +30,9 @@ int main() {
 template <typename T> void logVal(const T *val) {
     cout << val << " => " << *val << endl;
 }
-template <typename T> void logVec(const vector<T> *vec) {
-    cout << vec << " => { ";
-    for (const auto &ele : *vec) {
+template <typename T> void logIter(const T *iter) {
+    cout << iter << " => { ";
+    for (const auto &ele : *iter) {
         cout << ele << " ";
     }
     cout << "}" << endl;

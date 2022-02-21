@@ -1,13 +1,12 @@
 #include<bits/stdc++.h>
-#define long long long int
 using namespace std;
 template <typename T> void logVal(const T *);
-template <typename T> void logVec(const vector<T> *);
+template <typename T> void logIter(const T *);
 const int MOD = 1e9 + 7;
 void solve(const int &tc) {
     int n;
     cin >> n;
-    long bitStrs = 2;
+    long long bitStrs = 2;
     for (int i = 1; i < n; i++) {
         bitStrs = (bitStrs * 2) % MOD;
     }
@@ -26,9 +25,9 @@ int main() {
 template <typename T> void logVal(const T *val) {
     cout << val << " => " << *val << endl;
 }
-template <typename T> void logVec(const vector<T> *vec) {
-    cout << vec << " => { ";
-    for (const auto &ele : *vec) {
+template <typename T> void logIter(const T *iter) {
+    cout << iter << " => { ";
+    for (const auto &ele : *iter) {
         cout << ele << " ";
     }
     cout << "}" << endl;

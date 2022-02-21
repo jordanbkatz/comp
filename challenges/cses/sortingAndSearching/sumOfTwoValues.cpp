@@ -2,15 +2,29 @@
 using namespace std;
 template <typename T> void logVal(const T *);
 template <typename T> void logIter(const T *);
-int numSubStrs(const string str) {
-    int len = str.length();
-    return (len * (len + 1)) / 2;
-}
 void solve(const int &tc) {
-    string str = "Hello";
-    logVal(&str);
-    int subStrs = numSubStrs(str);
-    logVal(&subStrs);
+    int n, x;
+    cin >> n >> x;
+    int arr[n];
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+    bool possible = false;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (arr[i] + arr[j] == x && i != j) {
+                possible = true;
+                cout << (i + 1) << " " << (j + 1) << endl;
+                break;
+            }
+        }
+        if (possible) {
+            break;
+        }
+    }
+    if (!possible) {
+        cout << "IMPOSSIBLE";
+    }
 }
 int main() {
     ios_base::sync_with_stdio(false);

@@ -1,36 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 template <typename T> void logVal(const T *);
-template <typename T> void logVec(const vector<T> *);
-vector<int> primes(int, int);
-void solve(const int &tc) {
-    int mini = 0;
-    int maxi = 10;
-    vector<int> vec = primes(mini, maxi);
-    logVal(&mini);
-    logVal(&maxi);
-    logVec(&vec);
-}
-int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(0);
-    int tc = 1;
-    //cin >> tc;
-    for (int i = 1; i <= tc; i++) {
-        solve(i);
-    }
-    return 0;
-}
-template <typename T> void logVal(const T *val) {
-    cout << val << " => " << *val << endl;
-}
-template <typename T> void logVec(const vector<T> *vec) {
-    cout << vec << " => { ";
-    for (const auto &ele : *vec) {
-        cout << ele << " ";
-    }
-    cout << "}" << endl;
-}
+template <typename T> void logIter(const T *);
 vector<int> primes(const int minimum, const int maximum) {
     vector<int> primes;
     bool isPrime;
@@ -46,4 +17,32 @@ vector<int> primes(const int minimum, const int maximum) {
         }
     }
     return primes;
+}
+void solve(const int &tc) {
+    int mini = 0;
+    int maxi = 10;
+    vector<int> vec = primes(mini, maxi);
+    logVal(&mini);
+    logVal(&maxi);
+    logIter(&vec);
+}
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    int tc = 1;
+    //cin >> tc;
+    for (int i = 1; i <= tc; i++) {
+        solve(i);
+    }
+    return 0;
+}
+template <typename T> void logVal(const T *val) {
+    cout << val << " => " << *val << endl;
+}
+template <typename T> void logIter(const T *iter) {
+    cout << iter << " => { ";
+    for (const auto &ele : *iter) {
+        cout << ele << " ";
+    }
+    cout << "}" << endl;
 }

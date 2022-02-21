@@ -2,15 +2,19 @@
 using namespace std;
 template <typename T> void logVal(const T *);
 template <typename T> void logIter(const T *);
-int numSubStrs(const string str) {
-    int len = str.length();
-    return (len * (len + 1)) / 2;
-}
 void solve(const int &tc) {
-    string str = "Hello";
-    logVal(&str);
-    int subStrs = numSubStrs(str);
-    logVal(&subStrs);
+    string str;
+    cin >> str;
+    vector<string> strings;
+    sort(str.begin(), str.end());
+    do {
+        strings.push_back(str);
+    } while (next_permutation(str.begin(), str.end()));
+    sort(strings.begin(), strings.end());
+    cout << strings.size() << endl;
+    for (const auto &s : strings) {
+        cout << s << endl;
+    }
 }
 int main() {
     ios_base::sync_with_stdio(false);

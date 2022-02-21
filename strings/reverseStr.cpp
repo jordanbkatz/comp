@@ -1,8 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 template <typename T> void logVal(const T *);
-template <typename T> void logVec(const vector<T> *);
-string reverseStr(const string);
+template <typename T> void logIter(const T *);
+string reverseStr(const string str) {
+    string reversed = str;
+    for (int i = 0; i < reversed.length(); i++) {
+        reversed[reversed.length() - i - 1] = str[i];
+    }
+    return reversed;
+}
 void solve(const int &tc) {
     string str = "Hello";
     logVal(&str);
@@ -22,17 +28,10 @@ int main() {
 template <typename T> void logVal(const T *val) {
     cout << val << " => " << *val << endl;
 }
-template <typename T> void logVec(const vector<T> *vec) {
-    cout << vec << " => { ";
-    for (const auto &ele : *vec) {
+template <typename T> void logIter(const T *iter) {
+    cout << iter << " => { ";
+    for (const auto &ele : *iter) {
         cout << ele << " ";
     }
     cout << "}" << endl;
-}
-string reverseStr(const string str) {
-    string reversed = str;
-    for (int i = 0; i < reversed.length(); i++) {
-        reversed[reversed.length() - i - 1] = str[i];
-    }
-    return reversed;
 }

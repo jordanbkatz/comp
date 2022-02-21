@@ -1,27 +1,20 @@
 #include<bits/stdc++.h>
 using namespace std;
 template <typename T> void logVal(const T *);
-template <typename T> void logVec(const vector<T> *);
-const unsigned int MOD = 1e9 + 7;
+template <typename T> void logIter(const T *);
 void solve(const int &tc) {
     int n, x;
-    bool found;
-    vector<int> vec;
     cin >> n;
+    vector<int> v;
     for (int i = 0; i < n - 1; i++) {
         cin >> x;
-        vec.push_back(x);
+        v.push_back(x);
     }
-    for (int i = 1; i <= n; i++) {
-        found = false;
-        for (const auto &val : vec) {
-            if (val == i) {
-                found = true;
-                break;
-            }
-        }
-        if (!found) {
-            cout << i << endl;
+    sort(v.begin(), v.end());
+    for (int i = 0; i <= v.size(); i++) {
+        if (v[i] != i + 1) {
+            cout << i + 1;
+            break;
         }
     }
 }
@@ -38,9 +31,9 @@ int main() {
 template <typename T> void logVal(const T *val) {
     cout << val << " => " << *val << endl;
 }
-template <typename T> void logVec(const vector<T> *vec) {
-    cout << vec << " => { ";
-    for (const auto &ele : *vec) {
+template <typename T> void logIter(const T *iter) {
+    cout << iter << " => { ";
+    for (const auto &ele : *iter) {
         cout << ele << " ";
     }
     cout << "}" << endl;

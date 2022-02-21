@@ -2,15 +2,15 @@
 using namespace std;
 template <typename T> void logVal(const T *);
 template <typename T> void logIter(const T *);
-int numSubStrs(const string str) {
-    int len = str.length();
-    return (len * (len + 1)) / 2;
-}
 void solve(const int &tc) {
-    string str = "Hello";
-    logVal(&str);
-    int subStrs = numSubStrs(str);
-    logVal(&subStrs);
+    int n, x;
+    cin >> n;
+    set<int> arr;
+    for (int i = 0; i < n; i++) {
+        cin >> x;
+        arr.insert(x);
+    }
+    cout << arr.size() << endl;
 }
 int main() {
     ios_base::sync_with_stdio(false);

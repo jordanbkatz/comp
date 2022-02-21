@@ -1,15 +1,23 @@
 #include<bits/stdc++.h>
 using namespace std;
 template <typename T> void logVal(const T *);
-template <typename T> void logVec(const vector<T> *);
-long long factorial(int);
-long long catalan(int);
+template <typename T> void logIter(const T *);
+long long factorial(const int n) {
+    long long f = 1;
+    for (int i = 1; i <= n; i++) {
+        f *= i;
+    }
+    return f;
+}
+long long catalan(const int n) {
+    return factorial(2 * n) / (factorial(n + 1) * factorial(n));
+}
 void solve(const int &tc) {
     vector<long long> vec;
     for (int i = 0; i <= 10; i++) {
         vec.push_back(catalan(i));
     }
-    logVec(&vec);
+    logIter(&vec);
 }
 int main() {
     ios_base::sync_with_stdio(false);
@@ -24,20 +32,10 @@ int main() {
 template <typename T> void logVal(const T *val) {
     cout << val << " => " << *val << endl;
 }
-template <typename T> void logVec(const vector<T> *vec) {
-    cout << vec << " => { ";
-    for (const auto &ele : *vec) {
+template <typename T> void logIter(const T *iter) {
+    cout << iter << " => { ";
+    for (const auto &ele : *iter) {
         cout << ele << " ";
     }
     cout << "}" << endl;
-}
-long long factorial(const int n) {
-    long long f = 1;
-    for (int i = 1; i <= n; i++) {
-        f *= i;
-    }
-    return f;
-}
-long long catalan(const int n) {
-    return factorial(2 * n) / (factorial(n + 1) * factorial(n));
 }
