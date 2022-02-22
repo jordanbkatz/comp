@@ -3,7 +3,12 @@ using namespace std;
 template <typename T> void logVal(const T *);
 template <typename T> void logIter(const T *);
 void solve(const int &tc) {
-    
+    int a, b, count;
+    cin >> a >> b;
+    count = 0;
+    int mini = ceil(sqrt(a));
+    int maxi = floor(sqrt(b));
+    cout << (maxi - mini + 1) << endl;
 }
 int main() {
     ios_base::sync_with_stdio(false);
