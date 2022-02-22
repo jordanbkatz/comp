@@ -19,7 +19,7 @@ template <typename T> pair<T, int> getMode(vector<T> &v) {
     return mode;
 }
 void solve(const int &tc) {
-    vector<int> v = {1, 2, 1, 1, 1, 3, 4, 3, 3, 3, 3, 5, 5};
+    vector<int> v = {1, 2, 1, 3, 4, 3, 3, 3, 5, 5};
     logIter(&v);
     pair<int, int> mode = getMode(v);
     logVal(&mode.first);

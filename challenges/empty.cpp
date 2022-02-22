@@ -3,13 +3,21 @@ using namespace std;
 template <typename T> void logVal(const T *);
 template <typename T> void logIter(const T *);
 void solve(const int &tc) {
-    
+    int a, b, count;
+    cin >> a >> b;
+    count = 0;
+    for (int i = a; i <= b; i++) {
+        if (floor(sqrt(i)) == sqrt(i)) {
+            count++;
+        }
+    }
+    cout << count << endl;
 }
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
     int tc = 1;
-    //cin >> tc;
+    cin >> tc;
     for (int i = 1; i <= tc; i++) {
         solve(i);
     }
