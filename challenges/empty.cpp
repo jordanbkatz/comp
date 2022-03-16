@@ -4,6 +4,7 @@
 typedef long long ll;
 using namespace std;
 const int MOD = 1e9 + 7;
+template <typename T> void logVal(const string, const T &);
 template <typename T> void logIter(const string, const T &);
 template <typename T> void logArr(const string, const T *, const unsigned int);
 void solve(const int &tc) {
@@ -18,6 +19,9 @@ int main(int argc, char *argv[]) {
         solve(i);
     }
     return 0;
+}
+template <typename T> void logVal(const string name, const T &val) {
+    cout << name << " => " << val << endl;
 }
 template <typename T> void logIter(const string name, const T &iter) {
     cout << name << " => { ";
