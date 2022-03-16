@@ -1,9 +1,13 @@
 #include<bits/stdc++.h>
+#define pb push_back
+#define mp make_pair
+typedef long long ll;
 using namespace std;
+const int MOD = 1e9 + 7;
 template <typename T> void logVal(const T *);
 template <typename T> void logIter(const T *);
 void solve(const int &tc) {
-    long long n;
+    ll n;
     cin >> n;
     while (n != 1) {
         cout << n << " ";

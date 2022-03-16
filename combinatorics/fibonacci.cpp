@@ -2,26 +2,16 @@
 using namespace std;
 template <typename T> void logVal(const T *);
 template <typename T> void logIter(const T *);
-long long fibonacci(const int n) {
-    if (n != 0) {
-        long long last = 0;
-        long long fib = 1;
-        for (int i = 0; i < n - 1; i++) {
-            fib += last;
-            last = fib - last;
-        }
-        return fib;
-    }
-    else {
-        return 0;
-    }
-}
+typedef long long ll;
+const int MOD = 1e9 + 7;
+vector<ll> dp;
 void solve(const int &tc) {
-    vector<long long> vec;
-    for (int i = 0; i <= 10; i++) {
-        vec.push_back(fibonacci(i));
+    dp.push_back(0);
+    dp.push_back(1);
+    for (ll i = 2; i <= 10; i++) {
+        dp.push_back((dp[i - 1] + dp[i - 2]) % MOD);
     }
-    logIter(&vec);
+    logIter(&dp);
 }
 int main() {
     ios_base::sync_with_stdio(false);
