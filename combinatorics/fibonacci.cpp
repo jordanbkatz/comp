@@ -1,19 +1,24 @@
 #include<bits/stdc++.h>
+#define pb push_back
+#define mp make_pair
+#define lv(x) logVal(#x, x)
+#define li(x) logIter(#x, x)
+#define la(x, n) logArr(#x, x, n)
 using namespace std;
-template <typename T> void logVal(const T *);
-template <typename T> void logIter(const T *);
 typedef long long ll;
 const int MOD = 1e9 + 7;
-vector<ll> dp;
+template <typename T> void logVal(const string, const T &);
+template <typename T> void logIter(const string, const T &);
+template <typename T> void logArr(const string, const T *, const unsigned int);
 void solve(const int &tc) {
-    dp.push_back(0);
-    dp.push_back(1);
-    for (ll i = 2; i <= 10; i++) {
-        dp.push_back((dp[i - 1] + dp[i - 2]) % MOD);
+    int n = 10;
+    ll fib[n];
+    for (int i = 1; i <= n; i++) {
+        fib[i - 1] = (pow(1 + sqrt(5), i) - pow(1 - sqrt(5), i)) / (pow(2, i) * sqrt(5));
     }
-    logIter(&dp);
+    la(fib, n);
 }
-int main() {
+int main(int argc, char *argv[]) {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
     int tc = 1;
@@ -23,13 +28,20 @@ int main() {
     }
     return 0;
 }
-template <typename T> void logVal(const T *val) {
-    cout << val << " => " << *val << endl;
+template <typename T> void logVal(const string name, const T &val) {
+    cout << name << " => " << val << endl;
 }
-template <typename T> void logIter(const T *iter) {
-    cout << iter << " => { ";
-    for (const auto &ele : *iter) {
+template <typename T> void logIter(const string name, const T &iter) {
+    cout << name << " => { ";
+    for (const auto &ele : iter) {
         cout << ele << " ";
+    }
+    cout << "}" << endl;
+}
+template <typename T> void logArr(const string name, const T *arr, const unsigned int n) {
+    cout << name << " => { ";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
     }
     cout << "}" << endl;
 }

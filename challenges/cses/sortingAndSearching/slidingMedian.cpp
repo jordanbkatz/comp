@@ -1,13 +1,34 @@
 #include<bits/stdc++.h>
+#define lv(x) logVal(#x, x)
+#define li(x) logIter(#x, x)
+#define la(x, n) logArr(#x, x, n)
 using namespace std;
-#define LV(x) logVal(#x, x)
-#define LI(x) logIter(#x, x)
-#define LA(x, n) logArr(#x, x, n)
+typedef long long ll;
+const int MOD = 1e9 + 7;
+const int MXN = 2e5;
 template <typename T> void logVal(const string, const T &);
 template <typename T> void logIter(const string, const T &);
 template <typename T> void logArr(const string, const T *, const unsigned int);
+int n, k;
+int arr[MXN];
 void solve(const int &tc) {
-    
+    cin >> n >> k;
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+    int slider[k];
+    for (int i = 0; i < n - k + 1; i++) {
+        for (int j = 0; j < k; j++) {
+            slider[j] = arr[i + j];
+        }
+        sort(slider, slider + k);
+        if (k % 2 == 1) {
+            cout << slider[(k - 1) / 2] << " ";
+        }
+        else {
+            cout << slider[(k / 2) - 1] << " ";
+        }
+    }
 }
 int main(int argc, char *argv[]) {
     ios_base::sync_with_stdio(false);

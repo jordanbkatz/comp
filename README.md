@@ -8,14 +8,17 @@ This can also be found in the template.cpp file in the root directory.
 #include<bits/stdc++.h>
 #define pb push_back
 #define mp make_pair
-typedef long long ll;
+#define lv(x) logVal(#x, x)
+#define li(x) logIter(#x, x)
+#define la(x, n) logArr(#x, x, n)
 using namespace std;
+typedef long long ll;
 const int MOD = 1e9 + 7;
 template <typename T> void logVal(const string, const T &);
 template <typename T> void logIter(const string, const T &);
 template <typename T> void logArr(const string, const T *, const unsigned int);
 void solve(const int &tc) {
-
+    
 }
 int main(int argc, char *argv[]) {
     ios_base::sync_with_stdio(false);

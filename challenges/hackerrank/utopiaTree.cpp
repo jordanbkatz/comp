@@ -7,13 +7,24 @@ template <typename T> void logVal(const string, const T &);
 template <typename T> void logIter(const string, const T &);
 template <typename T> void logArr(const string, const T *, const unsigned int);
 void solve(const int &tc) {
-    
+    int n;
+    cin >> n;
+    int h = 1;
+    for (int i = 0; i < n; i++) {
+        if (i % 2 == 0) {
+            h *= 2;
+        }
+        else {
+            h++;
+        }
+    }
+    cout << h << endl;
 }
 int main(int argc, char *argv[]) {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
     int tc = 1;
-    //cin >> tc;
+    cin >> tc;
     for (int i = 1; i <= tc; i++) {
         solve(i);
     }

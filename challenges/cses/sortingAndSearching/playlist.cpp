@@ -1,13 +1,22 @@
 #include<bits/stdc++.h>
 using namespace std;
-#define LV(x) logVal(#x, x)
-#define LI(x) logIter(#x, x)
-#define LA(x, n) logArr(#x, x, n)
+#define lv(x) logVal(#x, x)
+#define li(x) logIter(#x, x)
+#define la(x, n) logArr(#x, x, n)
 template <typename T> void logVal(const string, const T &);
 template <typename T> void logIter(const string, const T &);
 template <typename T> void logArr(const string, const T *, const unsigned int);
 void solve(const int &tc) {
-    
+    int n;
+    cin >> n;
+    int a[n];
+    set<int> unique;
+    int c = 0;
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+        unique.insert(a[i]);
+    }
+    cout << unique.size();
 }
 int main(int argc, char *argv[]) {
     ios_base::sync_with_stdio(false);

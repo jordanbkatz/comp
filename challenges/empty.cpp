@@ -1,9 +1,8 @@
 #include<bits/stdc++.h>
-#define pb push_back
-#define mp make_pair
-typedef long long ll;
 using namespace std;
-const int MOD = 1e9 + 7;
+#define LV(x) logVal(#x, x)
+#define LI(x) logIter(#x, x)
+#define LA(x, n) logArr(#x, x, n)
 template <typename T> void logVal(const string, const T &);
 template <typename T> void logIter(const string, const T &);
 template <typename T> void logArr(const string, const T *, const unsigned int);
