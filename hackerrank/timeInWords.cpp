@@ -5,7 +5,7 @@ template <typename T> void logIter(const T *);
 void solve(const int &tc) {
     int h, m;
     cin >> h >> m;
-    const vector<string> names = {
+    const string names[21] = {
         "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
         "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"
     };
