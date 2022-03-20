@@ -266,8 +266,26 @@ class Bigint {
         }
     }
 };
+class Solution {
+    public:
+    Solution(const int &tc) {
+        int n;
+        cin >> n;
+        Bigint f("1");
+        for (int i = 1; i <= n; i++) {
+            f.mul(to_string(i));
+        }
+        cout << f.val;
+    }
+    private:
+};
 int main(int argc, char *argv[]) {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
+    int tc = 1;
+    //cin >> tc;
+    for (int i = 1; i <= tc; i++) {
+        Solution solve(i);
+    }
     return 0;
 }

@@ -1,10 +1,3 @@
-# Comp
-## Jordan Katz
-### Description
-A repository for my original competitive programming solutions.
-### Template
-This can also be found in the template.cpp file in the root directory.
-```cpp
 #include<bits/stdc++.h>
 using namespace std;
 #define pb push_back
@@ -23,7 +16,14 @@ template <typename T, typename V> void _P(map<T, V> &m) {cout << "{ "; for (auto
 class Solution {
     public:
     Solution(const int &tc) {
-        
+        int n;
+        cin >> n;
+        int l = 2, t = 0;
+        for (int i = 0; i < n; i++) {
+            t += l;
+            l = (3 * l) / 2;
+        }
+        cout << t;
     }
     private:
 };
@@ -37,4 +37,3 @@ int main(int argc, char *argv[]) {
     }
     return 0;
 }
-```
