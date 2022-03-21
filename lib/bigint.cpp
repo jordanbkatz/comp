@@ -9,10 +9,10 @@ using namespace std;
 typedef long long int ll;
 const int MOD = 1e9 + 7;
 template <typename T> void _P(T &x) {cout << x << " ";};
-template <typename T, typename V> void _P(pair<T, V> &p) {cout << "( " << p.ff << ", " << p.ss << " ) ";};
-template <typename T> void _P(vector<T> &v) {cout << "[ "; for (T &x : v) {_P(x);} cout << "] ";}
-template <typename T> void _P(set<T> &s) {cout << "{ "; for (const T &x : s) {_P(x);} cout << "} ";}
-template <typename T, typename V> void _P(map<T, V> &m) {cout << "{ "; for (auto x: m) {_P(x);} cout << "} ";}
+template <typename T, typename V> void _P(pair<T, V> &p) {cout << "(" << p.ff << ", " << p.ss << ") ";};
+template <typename T> void _P(vector<T> &v) {cout << "[ "; for (T &x : v) {_P(x);} cout << "]";}
+template <typename T> void _P(set<T> &s) {cout << "{ "; for (const T &x : s) {_P(x);} cout << "}";}
+template <typename T, typename V> void _P(map<T, V> &m) {cout << "{ "; for (auto x: m) {_P(x);} cout << "}";}
 namespace bigint {
     string add(string, string);
     void inc(string &, string);
@@ -282,27 +282,4 @@ namespace bigint {
             }
         }
     }
-}
-class Solution {
-    public:
-    Solution(const int &tc) {
-        int n;
-        cin >> n;
-        string f = "1";
-        for (int i = 1; i <= n; i++) {
-            f = bigint::mul(f, to_string(i));
-        }
-        cout << f;
-    }
-    private:
-};
-int main(int argc, char *argv[]) {
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    int tc = 1;
-    //cin >> tc;
-    for (int i = 1; i <= tc; i++) {
-        Solution solve(i);
-    }
-    return 0;
 }

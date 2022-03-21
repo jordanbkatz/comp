@@ -288,11 +288,13 @@ class Solution {
     Solution(const int &tc) {
         int n;
         cin >> n;
-        string f = "1";
-        for (int i = 1; i <= n; i++) {
-            f = bigint::mul(f, to_string(i));
+        vector<string> f(n + 1);
+        f[0] = "0";
+        f[1] = "1";
+        for (int i = 2; i <= n; i++) {
+            f[i] = bigint::add(f[i - 1], f[i - 2]);
         }
-        cout << f;
+        cout << f[n];
     }
     private:
 };
