@@ -39,8 +39,8 @@ class Bigint {
             if (val.size() < num.size()) {
                 swap(val, num);
             }
-            reverse(val.begin(), val.end());
-            reverse(num.begin(), num.end());
+            reverse(all(val));
+            reverse(all(num));
             for (int i = 0; i < num.size(); i++) {
                 int a = val[i] - '0';
                 int b = num[i] - '0';
@@ -72,7 +72,7 @@ class Bigint {
             if (negative) {
                 val.push_back('-');
             }
-            reverse(val.begin(), val.end());
+            reverse(all(val));
         }
         this->removeLeadingZeros();
     }
@@ -103,8 +103,8 @@ class Bigint {
                     swap(val, num);
                 }
             }
-            reverse(val.begin(), val.end());
-            reverse(num.begin(), num.end());
+            reverse(all(val));
+            reverse(all(num));
             for (int i = 0; i < num.size(); i++) {
                 int a = val[i] - '0';
                 int b = num[i] - '0';
@@ -127,7 +127,7 @@ class Bigint {
             if (negative) {
                 val.push_back('-');
             }
-            reverse(val.begin(), val.end());
+            reverse(all(val));
         }
         this->removeLeadingZeros();
     }

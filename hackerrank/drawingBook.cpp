@@ -16,7 +16,9 @@ template <typename T, typename V> void _P(map<T, V> &m) {cout << "{ "; for (auto
 class Solution {
     public:
     Solution(const int &tc) {
-        
+        int n, k;
+        cin >> n >> k;
+        cout << min(k / 2, (((n % 2 == 0) ? 1 : 0) + n - k) / 2);
     }
     private:
 };

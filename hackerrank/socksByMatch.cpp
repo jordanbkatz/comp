@@ -9,14 +9,34 @@ using namespace std;
 typedef long long int ll;
 const int MOD = 1e9 + 7;
 template <typename T> void _P(T &x) {cout << x << " ";};
-template <typename T, typename V> void _P(pair<T, V> &p) {cout << "( " << p.ff << ", " << p.ss << " ) ";};
+template <typename T, typename V> void _P(pair<T, V> &p) {cout << "(" << p.ff << " " << p.ss << ") ";};
 template <typename T> void _P(vector<T> &v) {cout << "[ "; for (T &x : v) {_P(x);} cout << "] ";}
 template <typename T> void _P(set<T> &s) {cout << "{ "; for (const T &x : s) {_P(x);} cout << "} ";}
 template <typename T, typename V> void _P(map<T, V> &m) {cout << "{ "; for (auto x: m) {_P(x);} cout << "} ";}
 class Solution {
     public:
     Solution(const int &tc) {
-        
+        int n;
+        cin >> n;
+        int a[n];
+        vector<pair<int, int>> v;
+        int c = 0;
+        for (int i = 0; i < n; i++) {
+            cin >> a[i];
+            bool paired = false;
+            for (auto &p : v) {
+                if (p.ss == 0 && p.ff == a[i]) {
+                    p.ss = a[i];
+                    paired = true;
+                    c++;
+                    break;
+                }
+            }
+            if (!paired) {
+                v.pb(mp(a[i], 0));
+            }
+        }
+        cout << c;
     }
     private:
 };
