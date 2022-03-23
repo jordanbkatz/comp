@@ -16,8 +16,22 @@ template <typename T, typename V> void _P(map<T, V> &m) {cout << "{ "; for (auto
 class Solution {
     public:
     Solution(const int &tc) {
-        int a, b, c;
-        
+        int a, b;
+        float c;
+        bool found = false;
+        for (a = 1; a < 1000; a++) {
+            for (b = 1; b < 1000 - a; b++) {
+                c = sqrt(pow(a, 2) + pow(b, 2));
+                if (a + b + c == 1000) {
+                    found = true;
+                    break;
+                }
+            }
+            if (found) {
+                break;
+            }
+        }
+        cout << (int) (a * b * c);
     }
     private:
 };

@@ -5,7 +5,7 @@ using namespace std;
 #define ff first
 #define ss second
 #define all(x) x.begin(), x.end()
-#define dbg(x) cout << #x << " => "; _P(x); cout << endl;
+#define dbg(x) cout << #x << " => "; _P(x); cout << endl
 typedef long long int ll;
 const int MOD = 1e9 + 7;
 template <typename T> void _P(T &x) {cout << x << " ";};
