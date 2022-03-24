@@ -9,14 +9,32 @@ using namespace std;
 typedef long long int ll;
 const int MOD = 1e9 + 7;
 template <typename T> void _P(T &x) {cout << x << " ";};
-template <typename T, typename V> void _P(pair<T, V> &p) {cout << "( " << p.ff << " , " << p.ss << " ) ";};
+template <typename T, typename V> void _P(pair<T, V> &p) {cout << "( " << p.ff << ", " << p.ss << " ) ";};
 template <typename T> void _P(vector<T> &v) {cout << "[ "; for (T &x : v) {_P(x);} cout << "] ";}
 template <typename T> void _P(set<T> &s) {cout << "{ "; for (const T &x : s) {_P(x);} cout << "} ";}
 template <typename T, typename V> void _P(map<T, V> &m) {cout << "{ "; for (auto x: m) {_P(x);} cout << "} ";}
 class Solution {
     public:
     Solution(const int &tc) {
-        
+        pair<int, int> largest;
+        int n, cnt;
+        for (int i = 1; i < 1e5; i++) {
+            n = i, cnt = 1;
+            while (n != 1) {
+                if (n % 2 == 0) {
+                    n /= 2;
+                }
+                else {
+                    n *= 3;
+                    n++;
+                }
+                cnt++;
+            }
+            if (i == 1 || cnt > largest.ss) {
+                largest = mp(i, cnt);
+            }
+        }
+        dbg(largest);
     }
     private:
 };
