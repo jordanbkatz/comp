@@ -19,7 +19,7 @@ template <typename T, typename V> void _P(pair<T, V> &p) {cout << "( "; _P(p.ff)
 template <typename T> void _P(vector<T> &v) {cout << "[ "; for (T &x : v) {_P(x);} cout << "] ";}
 template <typename T> void _P(set<T> &s) {cout << "{ "; for (const T &x : s) {_P(x);} cout << "} ";}
 template <typename T, typename V> void _P(map<T, V> &m) {cout << "{ "; for (auto x: m) {_P(x);} cout << "} ";}
-namespace bigint {
+namespace bigints {
     string add(string, string);
     void inc(string &, string);
     string sub(string, string);
