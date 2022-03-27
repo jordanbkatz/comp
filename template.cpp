@@ -30,7 +30,7 @@ const int MOD = 1e9 + 7;
 class Solution {
     public:
     Solution() {
-        
+
     }
 };
 int main(int argc, char *argv[]) {
@@ -40,7 +40,7 @@ int main(int argc, char *argv[]) {
     #endif
     fastio;
     int tc = 1;
-    cin >> tc;
+    //cin >> tc;
     for (int i = 1; i <= tc; i++) {
         //cout << "Case #" << i << ": ";
         Solution solve;
