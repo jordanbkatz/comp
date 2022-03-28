@@ -30,7 +30,7 @@ const int MOD = 1e9 + 7;
 class Solution {
     public:
     Solution() {
-
+        
     }
 };
 int main(int argc, char *argv[]) {
