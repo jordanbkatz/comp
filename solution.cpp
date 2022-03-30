@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
-typedef long long ll;
 #define LOCAL
+#define ll long long
 #define ln '\n'
 #define pb push_back
 #define mp make_pair
@@ -24,13 +24,11 @@ template <typename T, typename V> void _P(pair<T, V> &p) {cout << "( "; _P(p.ff)
 template <typename T> void _P(vector<T> &v) {cout << "[ "; for (T &x : v) {_P(x);} cout << "] ";}
 template <typename T> void _P(set<T> &s) {cout << "{ "; for (const T &x : s) {_P(x);} cout << "} ";}
 template <typename T, typename V> void _P(map<T, V> &m) {cout << "{ "; for (auto x: m) {_P(x);} cout << "} ";}
-template <typename T> void amin(T &x, T y) {if (x > y) x = y;}
-template <typename T> void amax(T &x, T y) {if (x < y) x = y;}
-const int MOD = 1e9 + 7;
+const int MOD = (int) 1e9 + 7;
 class Solution {
     public:
     Solution() {
-        
+
     }
 };
 int main(int argc, char *argv[]) {
