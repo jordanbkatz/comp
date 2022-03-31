@@ -1,12 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
-#define ld long double
-#define ar array
 #define pb push_back
 #define mp make_pair
 #define ff first
 #define ss second
+#define vt vector
 #define all(x) x.begin(), x.end()
 #define dbg(x) cout << #x << " => "; _P(x); cout << endl
 template <typename T> void _P(T &);
@@ -46,14 +45,4 @@ namespace strings {
         reverse(all(reversed));
         return str == reversed;
     }
-}
-const int MOD = 1e9 + 7;
-int main() {
-    if (strings::isPalindrome("10101")) {
-        cout << "YES";
-    }
-    else {
-        cout << "NO";
-    }
-    return 0;
 }
