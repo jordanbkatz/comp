@@ -1,7 +1,15 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <algorithm>
+#include <string>
+#include <vector>
+#include <set>
+#include <map>
+#include <queue>
+#include <deque>
+#include <stack>
+#include <bitset>
 using namespace std;
-typedef long long int ll;
-typedef long double ld;
+#define ll long long
 #define vt vector
 #define pb push_back
 #define mp make_pair
@@ -18,7 +26,7 @@ ostream &operator<<(ostream &os, const pair<A, B> &p) {
 }
 template<typename C, typename T = typename enable_if<!is_same<C, string>::value, typename C::value_type>::type>
 ostream &operator<<(ostream &os, const C &c) {
-    os << "[ "; for (const T &i : c) os << i << " "; return os << "] ";
+    os << "[ "; for (const T &i : c) os << i << " "; return os << "]";
 }
 namespace solution {
     void solve() {
