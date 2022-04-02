@@ -18,7 +18,7 @@ ostream &operator<<(ostream &os, const pair<A, B> &p) {
 }
 template<typename C, typename T = typename enable_if<!is_same<C, string>::value, typename C::value_type>::type>
 ostream &operator<<(ostream &os, const C &c) {
-    os << "[ "; for (const T &x : c) os << x << " "; return os << "] ";
+    os << "[ "; for (const T &i : c) os << i << " "; return os << "] ";
 }
 namespace solution {
     void solve() {
