@@ -2,16 +2,16 @@
 using namespace std;
 typedef long long int ll;
 typedef long double ld;
-#define mod (int) 1e9 + 7
-#define ln '\n'
 #define vt vector
 #define pb push_back
 #define mp make_pair
 #define ff first
 #define ss second
+#define endl '\n'
+#define mod 1000000007
 #define fastio ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 #define all(x) (x).begin(), (x).end()
-#define dbg(x) cout << #x << " => " << x << ln
+#define dbg(x) cout << #x << " => " << x << endl
 template <typename A, typename B>
 ostream &operator<<(ostream &os, const pair<A, B> &p) {
     return os << "( " << p.ff << " " << p.ss << " )";
