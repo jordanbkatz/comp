@@ -8,7 +8,6 @@
 #include <deque>
 #include <stack>
 #include <bitset>
-using namespace std;
 #define ll long long
 #define vt vector
 #define pb push_back
@@ -20,6 +19,7 @@ using namespace std;
 #define fastio ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 #define all(x) (x).begin(), (x).end()
 #define dbg(x) cout << #x << " => " << x << endl
+using namespace std;
 template <typename A, typename B>
 ostream &operator<<(ostream &os, const pair<A, B> &p) {
     return os << "( " << p.ff << " " << p.ss << " )";
@@ -33,7 +33,7 @@ namespace solution {
         
     }
 }
-int main(int argc, char *argv[]) {
+int main() {
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
     fastio;
