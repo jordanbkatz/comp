@@ -8,6 +8,8 @@
 #include <deque>
 #include <stack>
 #include <bitset>
+#include <iterator>
+#include <functional>
 #define ll long long
 #define vt vector
 #define pb push_back
@@ -30,6 +32,10 @@ ostream &operator<<(ostream &os, const C &c) {
 }
 namespace solution {
     void solve() {
+        /*
+            notes:
+
+        */
         
     }
 }

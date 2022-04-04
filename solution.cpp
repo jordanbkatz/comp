@@ -8,6 +8,8 @@
 #include <deque>
 #include <stack>
 #include <bitset>
+#include <iterator>
+#include <functional>
 #define ll long long
 #define vt vector
 #define pb push_back
@@ -30,6 +32,10 @@ ostream &operator<<(ostream &os, const C &c) {
 }
 namespace solution {
     void solve() {
+        /*
+            notes:
+
+        */
         
     }
 }
@@ -38,7 +44,7 @@ int main() {
     freopen("output.txt", "w", stdout);
     fastio;
     int tc = 1;
-    // cin >> tc;
+    //cin >> tc;
     for (int i = 1; i <= tc; i++) {
         // cout << "Case #" << i << ": ";
         solution::solve();
