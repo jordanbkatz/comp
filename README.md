@@ -8,7 +8,7 @@ A repository for my competitive programming workspace.
 ### Installation
 `git clone https://github.com/jordanbkatz/comp.git`
 ### Usage
-`g++ -DLOCAL -std=c++11 solution.cpp -o solution && ./solution`
+`g++ -DLOCAL -std=c++11 sol.cpp -o sol && ./sol && rm sol`
 ### Solution Template
 ```cpp
 #include <iostream>
@@ -48,7 +48,7 @@ ostream &operator<<(ostream &os, const C &c) {
 }
 namespace solution {
     void solve() {
-        cout << 5;
+        
     }
 }
 int main() {
