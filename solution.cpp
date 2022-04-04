@@ -35,7 +35,7 @@ ostream &operator<<(ostream &os, const C &c) {
 }
 namespace solution {
     void solve() {
-        
+       
     }
 }
 int main() {

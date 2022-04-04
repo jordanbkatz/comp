@@ -6,13 +6,9 @@ A repository for my competitive programming workspace.
 * git
 * c++ compiler
 ### Installation
-```bash
-git clone https://github.com/jordanbkatz/comp.git
-```
+`git clone https://github.com/jordanbkatz/comp.git`
 ### Usage
-```bash
-g++ -DLOCAL -std=c++11 solution.cpp -o solution && ./solution
-```
+`g++ -DLOCAL -std=c++11 solution.cpp -o solution && ./solution`
 ### Solution Template
 ```cpp
 #include <iostream>
