@@ -1,7 +1,18 @@
 # Comp
 ## Jordan Katz
 ### Description
-A repository for my competitive programming workspace
+A repository for my competitive programming workspace.
+### Dependencies
+* git
+* c++ compiler
+### Installation
+```bash
+git clone https://github.com/jordanbkatz/comp.git
+```
+### Usage
+```bash
+g++ -DLOCAL -std=c++11 solution.cpp -o solution && ./solution
+```
 ### Solution Template
 ```cpp
 #include <iostream>
