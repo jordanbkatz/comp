@@ -11,9 +11,9 @@ using namespace std;
 #define fastio ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 #define all(x) (x).begin(), (x).end()
 #ifdef LOCAL
-#define dbg(x) cout << #x << " => " << x << endl
+    #define dbg(x) cout << #x << " => " << x << endl
 #else
-#define dbg(x)
+    #define dbg(x)
 #endif
 template <typename A, typename B>
 ostream &operator<<(ostream &os, const pair<A, B> &p) {
