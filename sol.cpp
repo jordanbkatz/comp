@@ -1,5 +1,8 @@
 #include <iostream>
 #include <algorithm>
+#include <iterator>
+#include <functional>
+#include <cmath>
 #include <string>
 #include <vector>
 #include <set>
@@ -8,13 +11,12 @@
 #include <deque>
 #include <stack>
 #include <bitset>
-#include <functional>
 #define ll long long
 #define vt vector
 #define pb push_back
 #define mp make_pair
-#define a first
-#define b second
+#define ff first
+#define ss second
 #define endl '\n'
 #define mod 1000000007
 #define fastio ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
@@ -27,7 +29,7 @@
 using namespace std;
 template <typename A, typename B>
 ostream &operator<<(ostream &os, const pair<A, B> &p) {
-    return os << "( " << p.a << " " << p.b << " )";
+    return os << "( " << p.ff << " " << p.ss << " )";
 }
 template<typename C, typename T = typename enable_if<!is_same<C, string>::value, typename C::value_type>::type>
 ostream &operator<<(ostream &os, const C &c) {
