@@ -1,14 +1,5 @@
-#include <iostream>
-#include <algorithm>
-#include <cmath>
-#include <string>
-#include <vector>
-#include <set>
-#include <map>
-#include <queue>
-#include <deque>
-#include <stack>
-#include <bitset>
+#include <bits/stdc++.h>
+using namespace std;
 #define ll long long
 #define vt vector
 #define pb push_back
@@ -24,7 +15,6 @@
 #else
 #define dbg(x)
 #endif
-using namespace std;
 template <typename A, typename B>
 ostream &operator<<(ostream &os, const pair<A, B> &p) {
     return os << "( " << p.ff << " " << p.ss << " )";

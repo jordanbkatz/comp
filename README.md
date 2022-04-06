@@ -4,30 +4,24 @@
 A repository for my competitive programming workspace.
 ### Dependencies
 * git
-* c++ compiler
+* GNU c++ compiler
 ### Installation
 `git clone https://github.com/jordanbkatz/comp.git`
 ### Usage
-`g++ -DLOCAL -std=c++11 sol.cpp -o sol && ./sol && rm sol`
+modify executable permissions
+`chmod +x sol`
+run solution
+`./sol`
 ### Solution Template
 ```cpp
-#include <iostream>
-#include <algorithm>
-#include <string>
-#include <vector>
-#include <set>
-#include <map>
-#include <queue>
-#include <deque>
-#include <stack>
-#include <bitset>
-#include <functional>
+#include <bits/stdc++.h>
+using namespace std;
 #define ll long long
 #define vt vector
 #define pb push_back
 #define mp make_pair
-#define a first
-#define b second
+#define ff first
+#define ss second
 #define endl '\n'
 #define mod 1000000007
 #define fastio ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
@@ -37,10 +31,9 @@ A repository for my competitive programming workspace.
 #else
 #define dbg(x)
 #endif
-using namespace std;
 template <typename A, typename B>
 ostream &operator<<(ostream &os, const pair<A, B> &p) {
-    return os << "( " << p.a << " " << p.b << " )";
+    return os << "( " << p.ff << " " << p.ss << " )";
 }
 template<typename C, typename T = typename enable_if<!is_same<C, string>::value, typename C::value_type>::type>
 ostream &operator<<(ostream &os, const C &c) {
@@ -58,7 +51,7 @@ int main() {
     #endif
     fastio;
     int tc = 1;
-    //cin >> tc;
+    // cin >> tc;
     for (int i = 1; i <= tc; i++) {
         // cout << "Case #" << i << ": ";
         solution::solve();
