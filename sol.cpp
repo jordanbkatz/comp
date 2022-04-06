@@ -1,7 +1,5 @@
 #include <iostream>
 #include <algorithm>
-#include <iterator>
-#include <functional>
 #include <cmath>
 #include <string>
 #include <vector>
@@ -47,7 +45,7 @@ int main() {
     #endif
     fastio;
     int tc = 1;
-    //cin >> tc;
+    // cin >> tc;
     for (int i = 1; i <= tc; i++) {
         // cout << "Case #" << i << ": ";
         solution::solve();
