@@ -13,3 +13,9 @@ git clone https://github.com/jordanbkatz/comp.git
 ```
 ./sol.sh
 ```
+or
+```
+g++ -DLOCAL -std=c++17 sol.cpp
+./a.out
+rm a.out
+```
