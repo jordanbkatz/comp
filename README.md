@@ -9,14 +9,14 @@ A repository for my competitive programming workspace.
 `git clone https://github.com/jordanbkatz/comp.git`
 ### Usage
 #### modify executable permissions
-`chmod +x sol`
+`chmod +x sol.sh`
 #### run solution
-`./sol`
+`./sol.sh`
 ### Solution Template
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
-#define ll long long
+typedef long long ll;
 #define vt vector
 #define pb push_back
 #define mp make_pair
@@ -46,8 +46,7 @@ namespace solution {
 }
 int main() {
     #ifdef LOCAL
-        freopen("input.txt", "r", stdin);
-        freopen("output.txt", "w", stdout);
+        freopen("data.txt", "r", stdin);
     #endif
     fastio;
     int tc = 1;

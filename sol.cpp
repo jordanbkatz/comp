@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define ll long long
+typedef long long ll;
 #define vt vector
 #define pb push_back
 #define mp make_pair
@@ -30,8 +30,7 @@ namespace solution {
 }
 int main() {
     #ifdef LOCAL
-        freopen("input.txt", "r", stdin);
-        freopen("output.txt", "w", stdout);
+        freopen("data.txt", "r", stdin);
     #endif
     fastio;
     int tc = 1;
