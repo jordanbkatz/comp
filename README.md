@@ -10,12 +10,11 @@ A repository for my competitive programming workspace.
 git clone https://github.com/jordanbkatz/comp.git
 ```
 ### Usage
+change executable permissions
+```
+chmod +x sol.sh
+```
+run solution
 ```
 ./sol.sh
-```
-or
-```
-g++ -DLOCAL -std=c++17 sol.cpp
-./a.out
-rm a.out
 ```
