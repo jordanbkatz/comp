@@ -8,9 +8,6 @@ A repository for my competitive programming workspace.
 ### Installation
 `git clone https://github.com/jordanbkatz/comp.git`
 ### Usage
-modify executable permissions\
-`chmod +x sol.sh`\
-run solution\
 `./sol.sh`
 ### Solution Template
 ```cpp
