@@ -6,7 +6,9 @@ A repository for my competitive programming workspace.
 * git
 * GNU c++ compiler
 ### Installation
-```git clone https://github.com/jordanbkatz/comp.git```
+```
+git clone https://github.com/jordanbkatz/comp.git
+```
 ### Usage
 ```
 ./sol.sh
