@@ -3,14 +3,14 @@
 ### Description
 A repository for my competitive programming workspace.
 ### Dependencies
-* git
-* GNU c++ compiler
+* Git
+* GCC
 ### Installation
 ```
 git clone https://github.com/jordanbkatz/comp.git
 ```
 ### Usage
-change executable permissions
+change script permissions to executable
 ```
 chmod +x sol.sh
 ```
