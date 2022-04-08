@@ -6,15 +6,20 @@ A repository for my competitive programming workspace
 * Git
 * GCC
 ### Installation
-```
+clone repository
+```bash
 git clone https://github.com/jordanbkatz/comp.git
 ```
-### Usage
-change script permissions to executable
+go to directory
+```bash
+cd comp
 ```
+change script permissions to executable
+```bash
 chmod +x sol.sh
 ```
+### Usage
 run solution
-```
+```bash
 ./sol.sh
 ```
