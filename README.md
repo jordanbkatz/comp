@@ -5,20 +5,20 @@ A repository for my competitive programming workspace
 ### Dependencies
 * GCC
 ### Installation
-clone repository
+1. clone repository
 ```bash
 git clone https://github.com/jordanbkatz/comp.git
 ```
-go to directory
+2. go to directory
 ```bash
 cd comp
 ```
-change script permissions to executable
+3. change script permissions to executable
 ```bash
 chmod +x sol.sh
 ```
 ### Usage
-run solution
+write solution in [sol.cpp](https://github.com/jordanbkatz/comp/blob/master/sol.cpp) and then run it
 ```bash
 ./sol.sh
 ```
