@@ -23,3 +23,5 @@ run solution
 ```bash
 ./sol.sh
 ```
+### License
+[MIT](https://github.com/jordanbkatz/comp/blob/master/LICENSE)
