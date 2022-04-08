@@ -18,7 +18,7 @@ cd comp
 chmod +x sol.sh
 ```
 ### Usage
-write solution in [sol.cpp](https://github.com/jordanbkatz/comp/blob/master/sol.cpp) and then run it
+write solution in [sol.cpp](/sol.cpp) and then run it
 ```bash
 ./sol.sh
 ```
