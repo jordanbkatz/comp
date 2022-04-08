@@ -23,4 +23,4 @@ write solution in [sol.cpp](/sol.cpp) and then run it
 ./sol.sh
 ```
 ### License
-[MIT](https://github.com/jordanbkatz/comp/blob/master/LICENSE)
+[MIT](/LICENSE)
