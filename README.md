@@ -3,7 +3,6 @@
 ### Description
 A repository for my competitive programming workspace
 ### Dependencies
-* Git
 * GCC
 ### Installation
 clone repository
