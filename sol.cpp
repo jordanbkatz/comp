@@ -8,10 +8,10 @@ typedef long long ll;
 #define ss second
 #define endl '\n'
 #define mod 1000000007
-#define fastio ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
+#define fastio ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 #define all(x) (x).begin(), (x).end()
 #ifdef LOCAL
-    #define dbg(x) cout << #x << " => " << x << endl
+    #define dbg(x) cout << #x << " => " << x << endl;
 #else
     #define dbg(x)
 #endif
@@ -31,13 +31,20 @@ namespace solution {
 int main() {
     #ifdef LOCAL
         freopen("data.txt", "r", stdin);
+        auto start = chrono::high_resolution_clock::now();
     #endif
-    fastio;
+    fastio
     int tc = 1;
     // cin >> tc;
     for (int i = 1; i <= tc; i++) {
         // cout << "Case #" << i << ": ";
         solution::solve();
     }
+    #ifdef LOCAL
+        auto end = chrono::high_resolution_clock::now();
+        float duration = chrono::duration_cast<chrono::duration<float>>(end - start).count();
+        cout << setprecision(3) << fixed;
+        dbg(duration)
+    #endif
     return 0;
 }
