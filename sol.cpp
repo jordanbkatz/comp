@@ -31,7 +31,6 @@ namespace solution {
 int main() {
     #ifdef LOCAL
         freopen("data.txt", "r", stdin);
-        auto start = chrono::high_resolution_clock::now();
     #endif
     fastio
     int tc = 1;
@@ -40,11 +39,5 @@ int main() {
         // cout << "Case #" << i << ": ";
         solution::solve();
     }
-    #ifdef LOCAL
-        auto end = chrono::high_resolution_clock::now();
-        float duration = chrono::duration_cast<chrono::duration<float>>(end - start).count();
-        cout << setprecision(3) << fixed;
-        dbg(duration)
-    #endif
     return 0;
 }
