@@ -1,3 +1,3 @@
 #! /bin/bash
-g++ -DLOCAL -std=c++17 sol.cpp
-./a.out
+g++ -DLOCAL -std=c++17 -o sol sol.cpp
+./sol
